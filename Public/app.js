@@ -20,7 +20,7 @@ async function signUp(e) {
 
         }
 
-        const res = await axios.post("https://vercel-back-end-two.vercel.app/api/signUp",
+        const res = await axios.post("https://ai-resume-check-pied.vercel.app/api/signUp",
 
             { fullName, email, password }
         )
@@ -76,7 +76,7 @@ async function login(e) {
         }
 
 
-        const res = await axios.post("https://vercel-back-end-two.vercel.app/api/login",
+        const res = await axios.post("https://ai-resume-check-pied.vercel.app/api/login",
 
             { email, password }
 
@@ -124,7 +124,7 @@ async function home(e) {
     try {
         e.preventDefault();
 
-        const res = await axios.post("https://vercel-back-end-two.vercel.app/api/login",
+        const res = await axios.post("https://ai-resume-check-pied.vercel.app/api/login",
 
             { withCredentials: true }
 
@@ -188,7 +188,7 @@ async function conti(e) {
         }
 
 
-        const res = await axios.post("https://vercel-back-end-two.vercel.app/api/company", {
+        const res = await axios.post("https://ai-resume-check-pied.vercel.app/api/company", {
 
             company,
             fName,
@@ -256,7 +256,7 @@ async function addJobConfirm(e) {
             return;
         }
 
-        const res = await axios.post("https://vercel-back-end-two.vercel.app/api/jobData", {
+        const res = await axios.post("https://ai-resume-check-pied.vercel.app/api/jobData", {
 
             jobTilte,
             jobLocation,
@@ -330,7 +330,7 @@ async function jobFinder(e) {
 
         let findJob = document.getElementById("findJob");
 
-        const res1 = await axios.get("https://vercel-back-end-two.vercel.app/api/companiesData", {
+        const res1 = await axios.get("https://ai-resume-check-pied.vercel.app/api/companiesData", {
 
             company,
             fName,
@@ -339,7 +339,7 @@ async function jobFinder(e) {
         });
 
 
-        const res2 = await axios.get("https://vercel-back-end-two.vercel.app/api/jobDataPost", {
+        const res2 = await axios.get("https://ai-resume-check-pied.vercel.app/api/jobDataPost", {
 
             jobLocation,
         });
@@ -430,7 +430,7 @@ async function newJobDetais(e) {
         let descrip = document.getElementById("newJobDesPara");
 
 
-        const res1 = await axios.get("https://vercel-back-end-two.vercel.app/api/companiesData", {
+        const res1 = await axios.get("https://ai-resume-check-pied.vercel.app/api/companiesData", {
 
             company,
             fName,
@@ -438,7 +438,7 @@ async function newJobDetais(e) {
             number
         });
 
-        const res2 = await axios.get("https://vercel-back-end-two.vercel.app/api/jobDataPost", {
+        const res2 = await axios.get("https://ai-resume-check-pied.vercel.app/api/jobDataPost", {
 
             jobTilte,
             jobLocation,
@@ -529,7 +529,7 @@ async function resume() {
 
     try {
         // 2️⃣ Axios POST request
-        const res = await axios.post("https://vercel-back-end-two.vercel.app/api/upload", formData, {
+        const res = await axios.post("https://ai-resume-check-pied.vercel.app/api/upload", formData, {
             headers: {
                 "Content-Type": "multipart/form-data", // browser automatically set karta hai, par explicitly bhi chalega
             },
@@ -609,7 +609,7 @@ async function saveCVData() {
 
     try {
 
-        const response = await axios.post("https://vercel-back-end-two.vercel.app/api/saveResume",
+        const response = await axios.post("https://ai-resume-check-pied.vercel.app/api/saveResume",
 
             { resumeText }
         );
@@ -629,7 +629,7 @@ async function download() {
 
     const resumeElement = document.getElementById("resumeContainer");
 
-    const response = await axios.get("https://vercel-back-end-two.vercel.app/api/saveResume");
+    const response = await axios.get("https://ai-resume-check-pied.vercel.app/api/saveResume");
 
     console.log(response.data + "line 637");
 
