@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/utility.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="parnet_1">
+
+            <img src="../Assets/Images/download-removebg-preview.png" alt="logo">
+        </div>
+
+        <div class="parnet_2" onclick="backPost(event)">
+
+            <button>Back</button>
+
+        </div>
+
+    </header>
+
+    <main class="resume">
+
+        <div class="container_1">
+
+            <h2 class="title_1">AI Resume Analyzer</h2>
+
+
+            <div class="parent_1">
+
+                <input type="file" id="fileResume" accept="application/pdf" class="input_1">
+                <button onclick="resume()">Upload & Analyze</button>
+
+            </div>
+
+            <!-- <div id="resultBox" class="result_1 hidden">
+                <h3 class="sub_1">AI Analysis Result</h3>
+
+                <pre id="analysisOutput" class="output_1"></pre>
+
+                <h3 class="sub_1">Extracted Text</h3>
+                <pre id="textOutput" class="output_1"></pre>
+            </div> -->
+
+
+        </div>
+
+    </main>
+
+    <div class="checkResult" style="display:none;">
+
+        <div class="container_1">
+
+            <div class="parent_1">
+
+                <h1 class="head_1">Resume Score: <span id="resumeScore"></span></h1>
+                <h1 class="head_2">ATS Score: <span id="atsScore"></span></h1>
+
+            </div>
+
+            <div class="parent_2">
+
+                <h3>Missing Skills:</h3>
+                <ul id="skillsList"></ul>
+
+            </div>
+
+            <div class="parent_3">
+
+                <h3>Suggestions:</h3>
+                <div id="suggestionsContainer"></div>
+
+            </div>
+
+            <div class="parent_4">
+
+                <h3>Improved Resume:</h3>
+                <div id="resumeContainer"></div>
+
+            </div>
+
+            <div class="parent_5">
+
+                <button onclick="saveCVData()">Save</button>
+                <button onclick="download()">Download</button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/1de706ad7b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
